@@ -1,0 +1,32 @@
+create a virtual env
+---------------------
+py -3 -m venv <name>
+creating a venv named venv --> py -3 -m venv venv
+
+activate venv
+venv\Scripts\activate.bat
+
+
+start uvicorn server
+uvicorn <python file name>:<name of the fastapi instance>  ---> uvicorn main:app
+--> uvicorn main:app --reload
+
+for creating a python package, make sure to create a __init__.py file in a folder
+let's create an app folder for all application code and move main.py inside app folder
+uvicorn app.main:app --reload
+
+go to documentation -- automatic documentation
+http://127.0.0.1:8000/docs
+http://127.0.0.1:8000/redoc
+
+-------------------------------Alembic
+pip install alembic
+
+-- alembic init <dir_name>
+alembic init alembic 
+
+alembic revision -m "create posts table"
+
+alembic upgrade <version_number>
+------------------------------------
+pip freeze > requirements.txt
