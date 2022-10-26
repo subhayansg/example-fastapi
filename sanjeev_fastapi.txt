@@ -30,3 +30,8 @@ alembic revision -m "create posts table"
 alembic upgrade <version_number>
 ------------------------------------
 pip freeze > requirements.txt
+
+------------------------
+heroku create fastapi-subhayan
+
+git push heroku main
