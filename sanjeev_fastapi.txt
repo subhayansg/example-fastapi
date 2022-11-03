@@ -35,3 +35,6 @@ pip freeze > requirements.txt
 heroku create fastapi-subhayan
 
 git push heroku main
+heroku addons:create heroku-postgresql:hobby-dev
+heroku ps:restart
+heroku run "alembic upgrade head"
